@@ -2,7 +2,7 @@
 
 ---
 
-## Virtual Lab & Machine Setup
+## 1.Virtual Lab & Machine Setup
 
 ### Host
 * **Laptop:** Lenovo ThinkPad T430 (2019 Secondhand)
@@ -25,10 +25,10 @@
 
 ---
 
-## Lab Overview
+## 2.Lab Overview
 ![**Virtual Box**](./Screenshots/virtual_box.png)
 
-* Virtual Box
+* **Virtual Box**
 
 ---
 
@@ -67,6 +67,6 @@
 * **Processors:** 2 CPUs
 
 ---
-## Network & VM Settings
+## 3.Network & VM Settings
 
 **The Host-Only Adapter is set to configure automatically for this security testing. Every virtual machine has a snapshot taken to preserve its original settings in case of a system failure, allowing it to roll back to the default state.**
