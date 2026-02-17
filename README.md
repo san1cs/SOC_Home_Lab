@@ -7,7 +7,7 @@ This project is an end-to-end Security Operations Center (SOC) Home Lab designed
 
 ## Table of Contents
 1. [Lab Setup](./1_Lab_Setup/)
-2. [Environment Mastery: CMD & CLI](./2_Environment_Mastery:_CMD&_&_CLI/)
+2. [Environment Mastery: CMD & CLI](./2_Environment_Mastery:_CMD_&_CLI/)
 3. [Firewall Configuration & Rules Setup](./3_Firewall_Configuration_&_Rules_Setup/)
 4. [Log Analysis: Linux & Windows](./4_Log_Analysis:_Linux_&_Windows/)
 5. [Phishing Simulation](./5_Phishing_Simulation/)
