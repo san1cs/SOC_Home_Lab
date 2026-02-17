@@ -65,3 +65,8 @@
 * **IPv4 Address:** 192.168.251.13
 * **Base Memory:** 8GB
 * **Processors:** 2 CPUs
+
+---
+# Network & VM Settings
+
+**The Host-Only Adapter is set to configure automatically for this security testing. Every virtual machine has a snapshot taken to preserve its original settings in case of a system failure, allowing it to roll back to the default state.**
