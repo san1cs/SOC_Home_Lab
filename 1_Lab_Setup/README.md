@@ -27,11 +27,12 @@
 
 # Lab Overview
 ![**Virtual Box**](./Screenshots/virtual_box.png)
+
 * Virtual Box
 
 ---
 
-* ![**Kali Linux**](./Screenshots/kalilinux.png)
+![**Kali Linux**](./Screenshots/kalilinux.png)
 
 * **OS:** kali-linux-2025.2-virtualbox-amd64
 * **IPv4 Address:** 192.168.251.3
@@ -40,7 +41,7 @@
 
 ---
 
-* ![**Metsploitable**](./Screenshots/metasploitable.png)
+![**Metsploitable**](./Screenshots/metasploitable.png)
 
 * **OS:** Metasploitable Linux 2.0.0
 * **IPv4 Address:** 192.168.251.5
@@ -49,7 +50,7 @@
 
 ---
 
-* ![**Windows**](./Screenshots/windows.png)
+![**Windows**](./Screenshots/windows.png)
 
 * **OS:** Windows 10 Pro
 * **IPv4 Address:** 192.168.251.11
