@@ -25,7 +25,7 @@
 
 ---
 
-# Lab Overview
+## Lab Overview
 ![**Virtual Box**](./Screenshots/virtual_box.png)
 
 * Virtual Box
@@ -67,6 +67,6 @@
 * **Processors:** 2 CPUs
 
 ---
-# Network & VM Settings
+## Network & VM Settings
 
 **The Host-Only Adapter is set to configure automatically for this security testing. Every virtual machine has a snapshot taken to preserve its original settings in case of a system failure, allowing it to roll back to the default state.**
