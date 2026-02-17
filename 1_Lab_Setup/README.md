@@ -26,4 +26,41 @@
 ---
 
 # Lab Overview
+![**Virtual Box**](./Screenshots/virtual_box.png)
+* Virtual Box
 
+---
+
+* ![**Kali Linux**](./kali_linux.png)
+
+* **OS:** kali-linux-2025.2-virtualbox-amd64
+* **IPv4 Address:** 192.168.251.3
+* **Base Memory:** 2GB
+* **Processors:** 2 CPUs
+
+---
+
+* ![**Metsploitable**](./metasploitable.png)
+
+* **OS:** Metasploitable Linux 2.0.0
+* **IPv4 Address:** 192.168.251.5
+* **Base Memory:** 2GB
+* **Processors:** 2 CPUs
+
+---
+
+* ![**Windows**](./windows.png)
+
+* **OS:** Windows 10 Pro
+* **IPv4 Address:** 192.168.251.11
+* **Base Memory:** 4GB
+* **Processors:** 2 CPUs
+
+---
+
+![**Wazuh**](./wazuh.png)
+
+* **OS:** Wazuh v4.14.2 (OVA Deployment)
+* **IPv4 Address:** 192.168.251.13
+* **Base Memory:** 8GB
+* **Processors:** 2 CPUs
