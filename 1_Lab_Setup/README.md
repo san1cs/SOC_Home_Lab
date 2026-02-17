@@ -31,7 +31,7 @@
 
 ---
 
-* ![**Kali Linux**](./kali_linux.png)
+* ![**Kali Linux**](./Screenshots/kalilinux.png)
 
 * **OS:** kali-linux-2025.2-virtualbox-amd64
 * **IPv4 Address:** 192.168.251.3
@@ -40,7 +40,7 @@
 
 ---
 
-* ![**Metsploitable**](./metasploitable.png)
+* ![**Metsploitable**](./Screenshots/metasploitable.png)
 
 * **OS:** Metasploitable Linux 2.0.0
 * **IPv4 Address:** 192.168.251.5
@@ -49,7 +49,7 @@
 
 ---
 
-* ![**Windows**](./windows.png)
+* ![**Windows**](./Screenshots/windows.png)
 
 * **OS:** Windows 10 Pro
 * **IPv4 Address:** 192.168.251.11
@@ -58,7 +58,7 @@
 
 ---
 
-![**Wazuh**](./wazuh.png)
+![**Wazuh**](./Screenshots/wazuh.png)
 
 * **OS:** Wazuh v4.14.2 (OVA Deployment)
 * **IPv4 Address:** 192.168.251.13
