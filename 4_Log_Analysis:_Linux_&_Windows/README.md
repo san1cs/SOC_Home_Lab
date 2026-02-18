@@ -3,7 +3,7 @@
 ---
 ## 1.Linux Log: Metasploitable 2
 
-### 1.1.Dictionary Attack on FTP Service
+### 1.1.Dictionary Attack on FTP Service (21)
 
 * **Objective:** To verify that the target's security logs accurately, capturing high-volume failed login attempts and identify the attack source by looking through the logs.
 
@@ -44,5 +44,29 @@
 * _**Conclusion:** It is important to note that a few FAIL LOGIN entries appear after the OK LOGIN. This is a characteristic of an automated tool like Hydra. Because Hydra runs multiple "threads" in parallel, several incorrect guesses were already being processed by the server at the exact moment the correct password was found. This indicates that the tool successfully matched a password from the wordlist to the msfadmin account, granting the attacker full FTP access._
 
 ---
+
+## 2.Windows Log: Event Viewer
+
+### 2.1. Dictionary Attack on SMB Service (445)
+
+* **Action & Objective:** In this scenario, a dictionary attack was performed against the Windows target using the SMB (Server Message Block) protocol. SMB is commonly used for file sharing.
+
+* **Attack Command:** `hydra -l Bob -P /usr/share/wordlists/rockyou.txt 192.168.251.11 smb -vV`
+
+![kali](./screenshots/kali_win1.png)
+
+![kali](./screenshots/kali_win2.png)
+
+* **Log Retrieval:** Finding the failed logons (4625) in the security and exporting as .cvs file.
+
+![windows](./screenshots/windows_evt1.png)
+
+![windows](./screenshots/windows_evt2.png)
+
+[Windows log](./logs/smb_attack.cvs)
+
+### 2.2.Deep Log Analysis: Identification and Forensics
+
+**Log Report**
 
 
