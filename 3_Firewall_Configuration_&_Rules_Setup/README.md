@@ -14,19 +14,19 @@
 
  ### 2.1.Without Firewall
 
-* **Action:** Disabling the Windows Firewall to demonstrate how an unprotected host exposes its services and increases the attack surface during an Nmap discovery scan.
+**Action:** Disabling the Windows Firewall to demonstrate how an unprotected host exposes its services and increases the attack surface during an Nmap discovery scan.
 
 ![windows firewall](./screenshots/windows_nfirewall.png)
 
-* **Result:** [Nmap report for windows prot scan](./scan_reports/nmap_win_scan.txt)
+**Result:** [Nmap report for windows prot scan](./scan_reports/nmap_win_scan.txt)
 
 ### 2.2.With Firewall
 
-* **Action:** Enabling the Windows Firewall to demonstrate how active filtering controls port visibility and blocks unauthorized Nmap discovery scans.
+**Action:** Enabling the Windows Firewall to demonstrate how active filtering controls port visibility and blocks unauthorized Nmap discovery scans.
 
 ![windows firewall](./screenshots/windows_firewall.png)
 
-* **Result:** [Nmap report for windows prot scan](./scan_reports/nmap_win_fscan.txt)
+**Result:** [Nmap report for windows prot scan](./scan_reports/nmap_win_fscan.txt)
 
 ---
 
@@ -59,6 +59,14 @@
 ### 4.2.Blocking the IP
 
 **Action:** Executed the command `sudo ufw reject out to 192.168.251.5` to block the icmp from the metasploitable 2.
+
+*  _UFW uses a special rule book, it's a file called_ **before.rules**. _This file tells the firewall "Allow these basic things like Ping no matter what the user add the rules._
+ 
+*  _**Fix:** Edit the ICMP Rules by telling UFW to stop automatically saying "Yes" to pings._
+
+* _Open the configuration file_ `sudo nano /etc/ufw/before.rules`. _Change the_ **-A ufw-before-input -p icmp --icmp-type echo-request -j ACCEPT** _to_ **-A ufw-before-input -p icmp --icmp-type echo-request -j REJECT** _in ok icmp codes for INPUT. Type_ `sudo ufw reload` _to apply the new rule stick_
+
+* [Rulebook](./config/before.rules)
 
 ![meta](./screenshots/meta.png)
 
