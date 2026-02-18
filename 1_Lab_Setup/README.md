@@ -4,69 +4,67 @@
 
 ## 1.Virtual Lab & Machine Setup
 
-### Host
+### 1.1.Host
 * **Laptop:** Lenovo ThinkPad T430 (2019 Secondhand)
 * **Machine:** Windows 10 pro
 * **RAM:** 16 GB (8+8) DDR3
 * **Storage:** 500 GB HDD
 * **Processor:** Intel Core i5-3320m
 
-### **Virtual Machines Used**
+### 1.2.Virtual Machines Used
 * [Kali Linux (Attacker)](https://www.kali.org/get-kali/#kali-virtual-machines)
 * [Metasploitable 2 (Vulnerable Server)](https://www.vulnhub.com/entry/metasploitable-2,29/)
 * [Windows 10 (Target Workstation)](https://www.microsoft.com/en-in/software-download/windows10)
 * [Wazuh Manager (SIEM)](https://documentation.wazuh.com/current/deployment-options/virtual-machine/virtual-machine.html)
 
-### Lab Environment
+### 1.3.Lab Environment
 * [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 
-### Network Setting
-* **Mode:** Host-Only Adapter _(**Status:** Isolated from the Internet)_
+### 1.4.Network & VM Settings
+* The Host-Only Adapter is set to configure automatically for this security testing. Every virtual machine has a snapshot taken to preserve its original settings in case of a system failure, allowing it to roll back to the default state.
 
 ---
 
 ## 2.Lab Overview
+
+### 2.1.Virtual Box
+
 ![**Virtual Box**](./Screenshots/virtual_box.png)
 
-* **Virtual Box**
-
 ---
+### 2.2.kali-linux-2025.2-virtualbox-amd64
 
 ![**Kali Linux**](./Screenshots/kalilinux.png)
 
-* **OS:** kali-linux-2025.2-virtualbox-amd64
 * **IPv4 Address:** 192.168.251.3
 * **Base Memory:** 2GB
 * **Processors:** 2 CPUs
 
 ---
+### 2.3.Metasploitable Linux 2.0.0
 
 ![**Metsploitable**](./Screenshots/metasploitable.png)
 
-* **OS:** Metasploitable Linux 2.0.0
 * **IPv4 Address:** 192.168.251.5
 * **Base Memory:** 2GB
 * **Processors:** 2 CPUs
 
 ---
 
+### 2.4.Windows 10 Pro
+
 ![**Windows**](./Screenshots/windows.png)
 
-* **OS:** Windows 10 Pro
 * **IPv4 Address:** 192.168.251.11
 * **Base Memory:** 4GB
 * **Processors:** 2 CPUs
 
 ---
 
+### 2.5.Wazuh v4.14.2 (OVA Deployment)
+
 ![**Wazuh**](./Screenshots/wazuh.png)
 
-* **OS:** Wazuh v4.14.2 (OVA Deployment)
 * **IPv4 Address:** 192.168.251.13
 * **Base Memory:** 8GB
 * **Processors:** 2 CPUs
-
----
-## 3.Network & VM Settings
-
-**The Host-Only Adapter is set to configure automatically for this security testing. Every virtual machine has a snapshot taken to preserve its original settings in case of a system failure, allowing it to roll back to the default state.**
