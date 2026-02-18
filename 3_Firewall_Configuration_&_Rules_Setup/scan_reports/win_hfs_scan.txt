@@ -1,0 +1,10 @@
+# Nmap 7.95 scan initiated Wed Feb 18 02:56:32 2026 as: /usr/lib/nmap/nmap --privileged -p 80 -oN win_hfs_scan.txt 192.168.251.11
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 192.168.251.11
+Host is up (0.00043s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 08:00:27:50:E7:D0 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+
+# Nmap done at Wed Feb 18 02:56:33 2026 -- 1 IP address (1 host up) scanned in 0.33 seconds
