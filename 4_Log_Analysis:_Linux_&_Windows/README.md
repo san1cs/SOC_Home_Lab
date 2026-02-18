@@ -18,3 +18,31 @@
 * [Linux Log](./logs/ftp_attack.txt)
 
 ### 1.2.Deep Log Analysis: Identification and Forensics
+
+**Log Report**
+
+* Wed Feb 18 08:29:01 2026 [pid 5219] [msfadmin] FAIL LOGIN: Client "192.168.251.3"
+* Wed Feb 18 08:29:01 2026 [pid 5222] [msfadmin] FAIL LOGIN: Client "192.168.251.3"
+* Wed Feb 18 08:29:01 2026 [pid 5224] [msfadmin] FAIL LOGIN: Client "192.168.251.3"
+* Wed Feb 18 08:29:01 2026 [pid 5226] [msfadmin] FAIL LOGIN: Client "192.168.251.3"
+* Wed Feb 18 08:29:01 2026 [pid 5228] [msfadmin] FAIL LOGIN: Client "192.168.251.3"
+* **Wed Feb 18 08:29:02 2026 [pid 5204] [msfadmin] OK LOGIN: Client "192.168.251.3"**
+* Wed Feb 18 08:29:04 2026 [pid 5198] [msfadmin] FAIL LOGIN: Client "192.168.251.3"
+* Wed Feb 18 08:29:04 2026 [pid 5200] [msfadmin] FAIL LOGIN: Client "192.168.251.3"
+* Wed Feb 18 08:29:04 2026 [pid 5201] [msfadmin] FAIL LOGIN: Client "192.168.251.3"
+
+**Evidence Analysis**
+
+* **Attacker Identification (The "Who"):** The logs consistently record the source as Client "192.168.251.3". This confirms that all attempts originated from a single host (the Kali Linux machine) on the local network.
+
+* **Account Targeting (The "Whom"):** The attacker specifically targeted the msfadmin account. Since the logs show repeated attempts on a single username, this is classified as a targeted dictionary attack rather than a wide-spread "password spraying" attack.
+
+* **The Compromise (The "What Happened"):** The Failures: At 08:29:01, multiple threads (PIDs 5219, 5222, etc.) were rejected by the system, resulting in FAIL LOGIN entries.
+
+* **The Success:** At exactly 08:29:02, the log records OK LOGIN for PID 5204.
+
+* _**Conclusion:** It is important to note that a few FAIL LOGIN entries appear after the OK LOGIN. This is a characteristic of an automated tool like Hydra. Because Hydra runs multiple "threads" in parallel, several incorrect guesses were already being processed by the server at the exact moment the correct password was found. This indicates that the tool successfully matched a password from the wordlist to the msfadmin account, granting the attacker full FTP access._
+
+---
+
+
