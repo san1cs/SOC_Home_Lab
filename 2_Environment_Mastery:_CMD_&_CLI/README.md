@@ -3,24 +3,25 @@
 ---
 
 ## [1.Kali Linux Terminal (CLI)](./linux_cli_screenshots)
-**1.System Discovery**
+
+**1.1.System Discovery**
 * `uname -a`
 * `ls -la`
 * `df -h`
 * `echo`
 
-**2.User & Identity Audit**
+**1.2.User & Identity Audit**
 * `id`
 * `last`
 * `useradd`
 * `userdel`
 
-**3.Process & Activity Monitoring**
+**1.3.Process & Activity Monitoring**
 * `ps aux`
 * `top`
 * `history`
 
-**4.Forensics & Log Analysis**
+**1.4.Forensics & Log Analysis**
 * `cat`
 * `grep`
 * `tail`
@@ -31,21 +32,21 @@
 ---
 
 ## [2.Windows Command Prompt (CMD)](./windows_cmd_screenshots)
-**1.Identity & System**
+**2.1.Identity & System**
 * `whoami /all`
 * `hostname`
 * `systeminfo`
 * `net user`
 * `net localgroup administrators`
 
-**2.Network & Connectivity**
+**2.2.Network & Connectivity**
 * `ipconfig /all`
 * `ping`
 * `nslookup`
 * `netstat -ano`
 * `quser`
 
-**3.Files & Processes**
+**2.3.Files & Processes**
 * `tasklist /svc`
 * `schtasks | more`
 * `tree | more`
