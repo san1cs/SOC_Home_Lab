@@ -26,7 +26,9 @@
 
 * Manually created a text file containing the EICAR test string and saved in the document folder, Windows Defender Real-Time Protection was active and ready to monitor the system.
 
-![win](./screenshots/win3.png)
+![win](./screenshots/win0.png)
+
+![win](./screenshots/win1.png)
 
 ### 2.2.Identification (Detection & Analysis)
 
@@ -37,6 +39,8 @@
 ### 2.3.Containment
 
 * Even though the file was created locally, A Network Isolation is performed to simulate a standard response protocol. Manually disabled the network adapter on the Windows VM to "cut off" the machine from the rest of the lab environment and quarantined the malious file.
+
+![win](./screenshots/win3.png)
 
 ![win](./screenshots/win4.png)
 
@@ -52,9 +56,9 @@
 
 * Restored the system to a fully operational state by re-enabling the network adapter and restoring internet connectivity. Performed a final "Full Scan" with Windows Defender to confirm that the environment was clean and stable. No further alerts were triggered, indicating that the system was safe for normal use.
 
-![win](./screenshots/win6.png)
+![win](./screenshots/win7.png)
 
-![win](./screenshots/win6.png)
+![win](./screenshots/win8.png)
 
 ### 2.6.Lessons Learned
 
