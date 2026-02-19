@@ -57,13 +57,13 @@
 
 ![kali](./screenshots/kali_win2.png)
 
-* **Log Retrieval:** Finding the failed logons (4625) in the security and exporting as .cvs file.
+* **Log Exporting:** Finding the failed logons (4625) in the security and exporting as .evtx file.
 
 ![windows](./screenshots/windows_evt1.png)
 
 ![windows](./screenshots/windows_evt2.png)
 
-[Windows log](./logs/smb_attack.cvs)
+[Windows log](./logs/wine.evtx)
 
 ### 2.2.Deep Log Analysis: Identification and Forensics
 
