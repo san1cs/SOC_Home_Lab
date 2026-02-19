@@ -103,6 +103,20 @@ Since mobile operating systems like Android and iOS operate within a strict Linu
 
 ### 3.3.The Golden Rule of Digital Safety
 
-**When in doubt, go to the source:** If you receive an urgent security alert, never click the link in the email. Instead, manually type the official website address (e.g., portal.office.com) into your browser. If there is a real problem, the alert will be waiting for you there.
+**Socail Awarness:** When in doubt, go to the source. If you receive an urgent security alert, never click the link in the email. Instead, manually type the official website address (e.g., portal.office.com) into your browser. If there is a real problem, the alert will be waiting for you there.
 
 ---
+
+## 4.Common Myth: MFA in Phishing
+
+### MFA & Phishing: Why It Fails
+
+* **MFA Fatigue:** Spamming the user with "Approve?" notifications until they click "Yes" out of annoyance.
+
+* **Session Hijacking:** Stealing the "Session Cookie" after the user logs in so the attacker can skip the MFA check entirely.
+
+* **Social Engineering:** Tricking the user into reading their one-time code over the phone or entering it into a fake website.
+
+* **Key Lesson:** MFA is essential, but it can be bypassed if the user is tricked. Security should focus on Phishing-Resistant MFA (like hardware keys) and User Awareness to never approve a prompt they didn't trigger.
+
+
