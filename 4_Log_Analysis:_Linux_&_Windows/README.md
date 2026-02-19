@@ -89,4 +89,32 @@
 
 ### 3.1.Windows: Account Lockout Policy
 
+![win](./screenshots/win_alp.png)
+
+* **The Account Lockout Policy** is a built-in Windows security feature designed to mitigate brute-force and dictionary attacks. By default this settings are set to default value, Implementing a lockout threshold creates a "wall" that disables the target account after a specific number of failures. The settings can be found in **local security policy > Security Settings > Account Policies > Account Lockout Policy > Account Lockout Threshold.**
+
 ### 3.2.Linux: Fail2Ban
+
+![kali](./screenshots/kali_f2b.png)
+
+* **Fail2Ban** is an Intrusion Prevention System (IPS) that protects Linux servers from brute-force attacks. While a standard firewall is "static," Fail2Ban is "dynamic"—it actively monitors system logs (like /var/log/auth.log) for patterns of failure. When it detects an IP address attempting to guess passwords, it automatically updates the system firewall to block that specific attacker for a set period. fail2ban is not installed by default in the linux, to install and configure:
+
+*  `sudo apt install fail2ban`
+*  `sudo nano cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`
+*  `sudo nano /etc/fail2ban/jail.local`
+
+```
+[]
+enabled = true
+port    = 
+filter  = 
+logpath = /var/log/auth.log
+maxretry = 10
+bantime  = 1h
+findtime = 10m
+```
+---
+
+### 4.key lesson
+
+* While the account locakout policy and fail 2 ban stops the attacker, it can also be used for Denial of Service (DoS)—an attacker could intentionally lock out a legitimate user's account by failing their password multiple times. This is why a 30-minute reset is usually better than a "Permanent" lockout.
