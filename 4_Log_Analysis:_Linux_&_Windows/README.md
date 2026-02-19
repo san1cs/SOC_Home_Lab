@@ -61,12 +61,32 @@
 
 ![windows](./screenshots/windows_evt1.png)
 
-![windows](./screenshots/windows_evt2.png)
+[Windows log](./logs/wine.evtx) _Download the .evtx to view it locally on windows_
 
-[Windows log](./logs/wine.evtx)
-
-### 2.2.Deep Log Analysis: Identification and Forensics
+### 2.2.Visual Log Analysis: Identification and Forensics
 
 **Log Report**
 
+![windows](./screenshots/windows_evt2.png)
 
+![windows](./screenshots/chart.png)
+
+[Windows log](./logs/wins.cvs) _.cvs file can be opened and upload it to excle or sheets_
+
+**Analysis Results:**
+
+* processed the 1,498 entries in log and filtered.
+
+* Failed Attempts (Event ID 4625): 1,383
+
+* Successful Logins (Event ID 4624): 11
+
+* Attack Source: 192.168.251.3 (Kali machine)
+
+---
+
+## 3.Countermeasures for Network-Based Brute-Force/Dictionary Attacks
+
+### 3.1.Windows: Account Lockout Policy
+
+### 3.2.Linux: Fail2Ban
