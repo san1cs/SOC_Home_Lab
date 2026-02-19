@@ -26,7 +26,7 @@ This project is an end-to-end Security Operations Center (SOC) Home Lab designed
 * **Threat Intelligence:** VirusTotal
 * **Endpoint Security:** Windows Defender (NGAV), Wazuh EDR
 * **Host-Based Analysis:** Windows Event Viewer, Process Explorer
-* **Social Engineering:** Social Engineering Toolkit (SET), Zphisher
+* **Social Engineering:** Zphisher
 * **Offensive Security:** Kali Linux, Metasploit Framework
 * **Vulnerability Management:** OpenVAS (GVM)
 
