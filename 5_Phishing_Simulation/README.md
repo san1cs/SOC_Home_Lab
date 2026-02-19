@@ -39,7 +39,7 @@ Since mobile operating systems like Android and iOS operate within a strict Linu
 
 * [**Email Template**](./folder/index.html)
 
-![kali](./screenshots/kali_z1.pgn)
+![kali](./screenshots/kali_z1.png)
 
 ### 2.2.User POV (The "Catch")
 
@@ -47,9 +47,9 @@ Since mobile operating systems like Android and iOS operate within a strict Linu
 
 * **The Experience**: The user sees a perfect clone of a Microsoft login page.
 
-![kali](./screenshots/kali_z2.pgn)
+![kali](./screenshots/kali_z2.png)
 
-![kali](./screenshots/kali_z3.pgn)
+![kali](./screenshots/kali_z3.png)
 
 ### 2.3.Backend Result (The "Harvest")
 
@@ -57,10 +57,11 @@ Since mobile operating systems like Android and iOS operate within a strict Linu
 
 * **Clean-up:** Redirecting the user to the original site to cover up the phishing.
 
-![kali](./screenshots/kali_z4.pgn)
+![kali](./screenshots/kali_z4.png)
 
-[**IP Address of victim**](./folder/ip.txt)
-[**User & Password of victim**](./folder/usernames.dat)
+* [**IP Address of victim**](./folder/ip.txt)
+
+* [**User & Password of victim**](./folder/usernames.dat)
 
 ---
 
