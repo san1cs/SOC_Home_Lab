@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail - Bob - Outlook</title>
+    <style>
+        /* MICROSOFT FLUENT UI REPLICATION */
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', 'Helvetica Neue', sans-serif; overflow: hidden; background-color: #f3f2f1; }
+        
+        /* TOP BLUE BAR */
+        header { background-color: #0078d4; height: 48px; display: flex; align-items: center; padding: 0 15px; color: white; justify-content: space-between; z-index: 100; position: relative; }
+        .brand { font-weight: 600; font-size: 16px; display: flex; align-items: center; }
+        .search-bar { background: #c7e0f4; width: 400px; height: 32px; border-radius: 2px; margin-left: 100px; }
+
+        .main-layout { display: flex; height: calc(100vh - 48px); }
+
+        /* LEFT NAVIGATION */
+        nav { width: 200px; background: #ffffff; border-right: 1px solid #edebe9; display: flex; flex-direction: column; padding-top: 10px; }
+        .nav-item { padding: 10px 20px; font-size: 14px; color: #323130; cursor: pointer; display: flex; align-items: center; }
+        .nav-item:hover { background-color: #f3f2f1; }
+        .nav-item.active { background-color: #eff6fc; color: #0078d4; font-weight: 600; border-left: 3px solid #0078d4; }
+
+        /* MIDDLE EMAIL LIST */
+        .email-list { width: 350px; background: #ffffff; border-right: 1px solid #edebe9; display: flex; flex-direction: column; }
+        .list-header { padding: 15px; font-weight: 600; border-bottom: 1px solid #edebe9; }
+        .email-preview { padding: 15px; border-bottom: 1px solid #f3f2f1; background: #fff; cursor: pointer; position: relative; }
+        .email-preview.unread { background-color: #f3f2f1; border-left: 3px solid #0078d4; }
+        .email-preview .sender { font-weight: 600; font-size: 14px; }
+        .email-preview .subject { font-size: 14px; color: #0078d4; margin: 4px 0; }
+        .email-preview .snippet { font-size: 12px; color: #605e5c; }
+
+        /* RIGHT READING PANE */
+        .reading-pane { flex: 1; background: #ffffff; display: flex; flex-direction: column; overflow-y: auto; }
+        .mail-toolbar { height: 44px; border-bottom: 1px solid #edebe9; display: flex; align-items: center; padding: 0 20px; font-size: 14px; color: #0078d4; }
+        .mail-content-area { padding: 30px 50px; }
+        .mail-title { font-size: 24px; font-weight: 300; color: #323130; margin-bottom: 20px; }
+        .sender-info { display: flex; align-items: center; margin-bottom: 30px; }
+        .avatar { width: 40px; height: 40px; border-radius: 50%; background: #a4262c; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 15px; }
+        
+        /* THE PHISHING LURE */
+        .lure-box { border: 1px solid #edebe9; padding: 20px; border-radius: 2px; background: #faf9f8; }
+        .btn-verify { background: #0078d4; color: white; padding: 10px 24px; text-decoration: none; display: inline-block; font-weight: 600; border-radius: 2px; margin: 15px 0; }
+        .btn-verify:hover { background: #005a9e; }
+        .footer-text { font-size: 12px; color: #605e5c; margin-top: 40px; border-top: 1px solid #edebe9; padding-top: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">::: &nbsp; Outlook</div>
+    <div class="search-bar"></div>
+    <div style="font-size: 12px;">Bob Admin</div>
+</header>
+
+<div class="main-layout">
+    <nav>
+        <div class="nav-item">New message</div>
+        <div class="nav-item active">Inbox</div>
+        <div class="nav-item">Sent Items</div>
+        <div class="nav-item">Drafts</div>
+        <div class="nav-item">Archive</div>
+    </nav>
+
+    <div class="email-list">
+        <div class="list-header">Focused</div>
+        <div class="email-preview unread">
+            <div class="sender">Microsoft Security Team</div>
+            <div class="subject">Action Required: Verify your Microsoft account</div>
+            <div class="snippet">Our automated security systems have...</div>
+        </div>
+        <div class="email-preview">
+            <div class="sender">HR Department</div>
+            <div class="subject">Monthly Newsletter</div>
+            <div class="snippet">Please find the attached updates...</div>
+        </div>
+    </div>
+
+    <div class="reading-pane">
+        <div class="mail-toolbar">Reply | Reply all | Forward | Delete | Archive | Junk</div>
+        <div class="mail-content-area">
+            <div class="mail-title">Action Required: Verify your Microsoft account</div>
+            
+            <div class="sender-info">
+                <div class="avatar">MS</div>
+                <div>
+                    <div style="font-weight: 600;">Microsoft Security Team &lt;no-reply@rnicrosoft.com&gt;</div>
+                    <div style="font-size: 12px; color: #605e5c;">To: Bob</div>
+                </div>
+            </div>
+
+            <div class="lure-box">
+                <p>Dear User,</p>
+                <p>Our automated security systems have flagged your account for a mandatory security protocol update. This is part of your quarterly security compliance review.</p>
+                <p><strong>Status:</strong> Pending Validation<br>
+                <strong>Reference ID:</strong> MS-62-2-91-22-MP-30-3</p>
+                <p>please verify your account immediately.</p>
+                
+                <a href="http://127.0.0.1:8080" class="btn-verify">Verify Account</a>
+
+                <p>If you ignore this message, your access to Office 365 services will be suspended in 24 hours.</p>
+            </div>
+
+            <div class="footer-text">
+                Microsoft Corporation, One Microsoft Way, Redmond, WA 98052<br>
+                This is a mandatory system security notification.
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
