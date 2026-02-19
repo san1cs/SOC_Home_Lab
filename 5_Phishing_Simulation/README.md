@@ -65,7 +65,44 @@ Since mobile operating systems like Android and iOS operate within a strict Linu
 
 ---
 
-## 3.Social Awareness of Suspicious Mail
+## 3.Shielding the Human: Beyond the Password
 
+## 3.1.Why "Strong" Passwords Fail
 
+* For decades, users have been told that a long, complex password is the ultimate defense. However, this simulation proves that complexity is not security.
 
+* **The Zero-Effort Theft:** A password like `B0bby_$inger_1950` is mathematically strong but logically vulnerable. It doesn't matter if a password takes 100 years to "crack" if a user is tricked into typing it into a fake portal in 5 seconds.
+
+## 3.2.The Human Firewall Guide
+
+1. **Look Closer at the Name**
+
+* Attackers use "look-alike" names. They hope you are in a hurry and won't notice the tiny differences.
+
+* **Real:** microsoft.com
+
+* **Fake:** rnicrosoft.com (The 'r' and 'n' together look like an 'm')
+
+* **Rule:** If it looks slightly "off," it's a trap.
+
+2. **Don't Fall for the "Panic"**
+
+* If an email says you must act "Right Now" or your account will be "Deleted," it is probably a scam.
+
+* **The Goal:** They want you to panic so you don't think clearly.
+
+* **Rule:** Real companies will give you time to fix an issue.
+
+3. **The "Hover" Trick (PC)**
+   
+* **Before you click any button, do this:** Put your mouse over the button without clicking. Look at the bottom corner of your screen. It will show you where the link actually goes.
+
+* **Rule:** If the email says "Microsoft" but the link goes to a random IP address or a strange website, delete it.
+
+* _**For the mobile:** Instead of tapping a link, press and hold it for two seconds. A little window will pop up showing you the full URL address. If it doesn't look like the official website, don't tap it!. Real security alerts will always show up inside the official app's notifications._
+
+## 3.3.The Golden Rule of Digital Safety
+
+**When in doubt, go to the source:** If you receive an urgent security alert, never click the link in the email. Instead, manually type the official website address (e.g., portal.office.com) into your browser. If there is a real problem, the alert will be waiting for you there.
+
+---
