@@ -53,11 +53,11 @@
 
 * **Attack Command:** `hydra -l Bob -P /usr/share/wordlists/rockyou.txt 192.168.251.11 smb -vV`
 
+* **Log Exporting:** Finding the failed logons (4625) in the security and exporting as .evtx file.
+
 ![kali](./screenshots/kali_win1.png)
 
 ![kali](./screenshots/kali_win2.png)
-
-* **Log Exporting:** Finding the failed logons (4625) in the security and exporting as .evtx file.
 
 ![windows](./screenshots/windows_evt1.png)
 
