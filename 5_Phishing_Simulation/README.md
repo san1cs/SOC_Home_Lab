@@ -67,13 +67,13 @@ Since mobile operating systems like Android and iOS operate within a strict Linu
 
 ## 3.Shielding the Human: Beyond the Password
 
-## 3.1.Why "Strong" Passwords Fail
+### 3.1.Why "Strong" Passwords Fail
 
 * For decades, users have been told that a long, complex password is the ultimate defense. However, this simulation proves that complexity is not security.
 
 * **The Zero-Effort Theft:** A password like `B0bby_$inger_1950` is mathematically strong but logically vulnerable. It doesn't matter if a password takes 100 years to "crack" if a user is tricked into typing it into a fake portal in 5 seconds.
 
-## 3.2.The Human Firewall Guide
+### 3.2.The Human Firewall Guide
 
 1. **Look Closer at the Name**
 
@@ -101,7 +101,7 @@ Since mobile operating systems like Android and iOS operate within a strict Linu
 
 * _**For the mobile:** Instead of tapping a link, press and hold it for two seconds. A little window will pop up showing you the full URL address. If it doesn't look like the official website, don't tap it!. Real security alerts will always show up inside the official app's notifications._
 
-## 3.3.The Golden Rule of Digital Safety
+### 3.3.The Golden Rule of Digital Safety
 
 **When in doubt, go to the source:** If you receive an urgent security alert, never click the link in the email. Instead, manually type the official website address (e.g., portal.office.com) into your browser. If there is a real problem, the alert will be waiting for you there.
 
