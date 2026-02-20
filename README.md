@@ -13,7 +13,7 @@ This project is an end-to-end Security Operations Center (SOC) Home Lab designed
 5. [Phishing Simulation](./5_Phishing_Simulation/)
 6. [Threat Detection & Incident Response](./6_Threat_Detection_&_Incident_Response/)
 7. [ELK Deployment & Troubleshooting ](./7_ELK_Deployment_&_Troubleshooting/)
-8. [Wireshark Packet Analysis](./8_Wireshark_Analysis/)
+8. [Wireshark Packet Analysis](./8_Wireshark_Packet_Analysis/)
 9. [Wazuh Deployment & Alert Validations](./9_Wazuh_Deployment_&_Alert_Validation/)
 10. [Vulnerability Management & Reports](./10_Vulnerability_Management_&_Reports/)
 
