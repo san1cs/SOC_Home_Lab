@@ -16,7 +16,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 * **Success Rate:** 20 packets transmitted, 20 received, 0% packet loss, time 19443ms
 
-![kali](./kali1.png)
+![kali](./screenshots/kali1.png)
 
 [**ICMP**](./pcap_files/icmp.pcapng)
 
@@ -46,7 +46,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 * The handshake completed in 3 packets with a total time of only a few milliseconds.
 
-![kali](./kali2.png)
+![kali](./screenshots/kali2.png)
 
 [**TCP-3-way**](./pcap_files/tcp.pcapng)
 
@@ -76,7 +76,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 * The RST-ACK is an "Active No." It tells the attacker (or user) that the machine is online, but the specific service they are looking for is not running.
 
-![kali](./kali3.png)
+![kali](./screenshots/kali3.png)
 
 [**TCP-3-way-fail**](./pcap_files/tcpfail.pcapng)
 
