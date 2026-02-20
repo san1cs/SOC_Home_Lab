@@ -1,3 +1,0 @@
-# Wireshark Packet Analysis
-
----
