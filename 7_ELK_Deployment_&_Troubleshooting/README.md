@@ -18,7 +18,7 @@
 
 * `sudo systemctl start service_name`
 
-[kali](./screenshots/kali1.png)
+![kali](./screenshots/kali1.png)
 
 ### 1.2.Configuring Elasticsearch and Kibiana
 
@@ -36,7 +36,7 @@
 
 * `sudo /usr/share/kibana/bin/kibana-verification-code`
 
-[kali](./screenshots/kali2.png)
+![kali](./screenshots/kali2.png)
 
 ### 1.3.Setting up the Fleet and Agent
 
