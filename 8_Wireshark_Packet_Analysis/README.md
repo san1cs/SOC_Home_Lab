@@ -60,7 +60,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 * Wireshark display filter `tcp.flags.reset == 1`
 
-* **3-way-handshake fail:** Making connection to the metasploitable telnet using port closed port `telnet 192.168.251.5:81`
+* **3-way-handshake fail:** Making connection to the metasploitable telnet using closed port `telnet 192.168.251.5:81`
 
 ### 3.2.Observation
 
@@ -82,4 +82,65 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ---
 
+## 4.Clear-Text Disclosure (Telnet)
+
+### 4.1.Action
+
+* Wireshark capture filter `tcp port 23`
+
+* Wireshark tcp `follow` > `tcp stream`
+
+* **Login:** Making a connection and entering the login credentials in the metasploitable telnet using command `telnet 192.168.251.5`
+  
+### 4.2.Observation
+
+* This capture demonstrates the extreme risk of using unencrypted legacy protocols like Telnet.
+
+* The protocol does not use TLS/SSL, the authentication process is sent in plain text. 
+
+* **Individual Packets:** In Telnet packets, you will only see one letter at a time. This is because Telnet sends data character-by-character.
+
+### 4.3.Result
+
+* By using the "Follow TCP Stream" feature in Wireshark to reconstruct the entire session and view the username and password exactly as they were entered by the user.
+
+* _**Solution:** Telnet is obsolete for security purposes and must be replaced by SSH (Secure Shell), which encrypts the entire stream._
+
+![kali](./screenshots/kali4.png)
+
+[**Telnet**](./pcap_files/telnet.pcapng)
+
+---
+
+## 5.The "Credential Thief" (HTTP Login)
+
+### 5.1.Action
+
+* Wireshark capture filter `tcp port http`
+
+* Wireshark display filter `http.request.method == "POST"`
+
+* **Request:** Entering the login credentials in the Damn Vulnerable Machine in firefox browser `http://telnet 192.168.251.5` to make a get/post request.
+
+### 5.2.Observation
+
+* **The POST Request:** Unlike a GET which asks for data, a POST sends data to the server.
+
+* **The HTML Form:** In the "Packet Details" pane, Expanded the titled "HTML Form URL Encoded" to see the credentials.
+  
+* **Plain-Text Leak:** Variables like username: `admin` and password: `password` listed clearly.
+
+### 5.3.Result
+
+* The credentials were leaked exactly as typed, with no masking or encryption.
+
+* HTTP (Port 80) provides zero security for data in transit. Attacker on the same network can easily harvest user credentials using a simple sniffer. 
+
+* _**Solution:** Web applications must use HTTPS (TLS) to wrap this data in an encrypted tunnel._
+
+![kali](./screenshots/kali5.png)
+
+[**HTTP**](./pcap_files/http.pcapng)
+
+---
 
