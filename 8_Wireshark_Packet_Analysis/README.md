@@ -144,3 +144,82 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ---
 
+## 6.Detecting a SYN Stealth Scan
+
+### 6.1.Action
+
+* Wireshark capture filter `tcp port 21 or tcp port 25 or tcp port 53 or tcp port 80`
+
+* Wireshark display filter `tcp.flags.syn == 1 && tcp.flags.reset == 1`
+
+* **Nmap:** Stealth scan on port FTP, SMTP, Domain, HTTP. `nmap -sS -p 21,25,53,80 192.168.251.5`
+  
+### 6.2.Observation
+
+* **SYN & SYN-ACK:** In the display filter a SYN go out and a SYN-ACK come back (proving the port is open).
+
+* **ACK & RST:** Instead of sending the final ACK to finish the connection, the Attacker (Kali) immediately sends a RST (Reset).
+
+* By sending a RST instead of an ACK, the attacker never "fully" connects. On many older systems, this prevented the connection from being logged in the application logs, even though the attacker now knows the port is open.
+
+### 6.3.Result
+
+* The Wireshark "Info" column shows a repeating pattern of [SYN], [SYN, ACK], and then [RST].
+
+* Normal user never sends a RST immediately after a SYN-ACK. Seeing this pattern across multiple ports (22, 80, 443) confirms that an automated scanning tool is mapping the network.
+
+![kali](./screenshots/kali6.png)
+
+[**Stealth**](./pcap_files/stealth.pcapng)
+
+---
+
+## 7.ICMP Flood (Denial of Service) Attack Detection
+
+### 7.1.Action
+
+* Wireshark capture filter `icmp`
+
+* **Ping Flooding:** Sending many echo request to the 192.168.251.5 to flood the machine. `sudo hping3 --icmp --flood  192.168.251.5`
+  
+### 7.2.Observation
+
+* This capture illustrates a Volumetric Denial of Service (DoS) attack using the ICMP protocol.
+
+* Unlike a standard connectivity test, this "Ping Flood" shows a massive volume of Echo Requests sent at high frequency from the attacker (192.168.251.3) to the target (192.168.251.5).
+
+* The extremely short time intervals between packets (visible in the "Time" column) demonstrate an attempt to consume the target's bandwidth and CPU resources.
+
+### 7.3.Result
+
+* **Graph:** The Wireshark I/O Graph (Statistics > I/O Graph) showed a vertical "spike" reaching higher packets in a fraction of a second, followed by an immediate drop to zero.
+
+![kali](./screenshots/kali7.png)
+
+[**DOS**](./pcap_files/dos.pcapng)
+
+---
+
+## 8.Detection of ARP Traffic
+
+### 8.1.Action
+
+* Wireshark capture filter `arp`
+
+* **ipv4 forward**
+
+* **arpspoof**
+
+### 8.2.Observation
+
+* This capture shows a successful Man-in-the-Middle attack. The attacker (kali linux) sent fake ARP messages to trick the network into thinking it was the Gateway (windows).
+
+*  Wireshark detected this trick and flagged it with a "Duplicate IP address" warning. This proves that the attacker has successfully intercepted the network traffic.
+
+### 8.3.Result
+
+![kali](./screenshots/kali8.png)
+
+[**ARP**](./pcap_files/arp.pcapng)
+
+---
