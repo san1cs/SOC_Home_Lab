@@ -38,7 +38,7 @@
 
 ![kali](./screenshots/kali2.png)
 
-### 1.3.Setting up the Fleet and Agent
+### 1.3.Setting up the Fleet Server and Agent
 
 * `sudo /usr/share/kibana/bin/kibana-encryption-keys generate` copy paste to `sudo nano /etc/kibana/kibana.yml`
 
@@ -46,9 +46,24 @@
 
 * Adding the **Kali Linux** as the fleet server
 
-* Adding the **Kali Linux** as the agent `enroll` `--insecure` `sudo systemctl enable elastic-agent` `sudo systemctl restart elastic-agent`
-
 * Adding the **Windows** as the agent `--insecure`
 
+* Adding the `windows` integration to the policy: management > fleet > agent policies > windows-policy > add integration > windows
+
+### 1.4.Elastic Agent auto Startup problem in Windows (Troubleshooting)
+
+* **win + r** > Run `services.msc` > Find `Elastic Agent`
+
+* `Elastic Agent` > Right click `Properties` > Startup type > `Automatic (delayed)`
+
+*  **Recovery Tab** > Set "First failure" to `Restart the Service` & Set "Second failure" to `Restart the Service`.
+
+* **Powershell** `Get-Service "Elastic Agent"`
+
+* **Powershell** `Restart-Service "Elastic Agent" -Force`
+
 ![kali](./screenshots/kali3.png)
+
+---
+
 
