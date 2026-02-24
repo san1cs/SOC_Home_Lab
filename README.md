@@ -22,12 +22,12 @@ This project is an end-to-end Security Operations Center (SOC) Home Lab designed
 ## Technical Stack & Tools
 
 * **SIEM / XDR:** Wazuh (Manager & Agents), ELK Stack (Elasticsearch, Logstash, Kibana)
-* **Network Analysis:** Wireshark, Nmap
+* **Network Analysis & Stress Testing:** Wireshark, Nmap, hping3
 * **Threat Intelligence:** VirusTotal
 * **Endpoint Security:** Windows Defender (NGAV), Wazuh EDR
 * **Host-Based Analysis:** Windows Event Viewer, Process Explorer
 * **Social Engineering:** Zphisher
-* **Offensive Security:** Kali Linux, Metasploit Framework
+* **Offensive Security:** Kali Linux, Metasploit Framework, arpspoof
 * **Vulnerability Management:** OpenVAS (GVM)
 
 ## Skills Demonstrated
