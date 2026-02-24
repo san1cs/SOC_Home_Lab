@@ -206,9 +206,10 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 * Wireshark capture filter `arp`
 
-* **ipv4 forward**
+* **ipv4 forward** Enabling the ipv4 forward to send the packet without droping  `sudo sysctl -w net.ipv4.ip_forward=1`
 
-* **arpspoof**
+* **arpspoof** Excecutinh the MITM command `sudo arpspoof -i eth1 -t 10.0.2.1 10.0.2.4` in termina 1 and `sudo arpspoof -i eth1 -t 10.0.2.4 10.0.2.1` in terminal 2
+
 
 ### 8.2.Observation
 
@@ -217,6 +218,8 @@ This capture verifies successful bidirectional communication between the Kali Li
 *  Wireshark detected this trick and flagged it with a "Duplicate IP address" warning. This proves that the attacker has successfully intercepted the network traffic.
 
 ### 8.3.Result
+
+* The Windows VM now sends all its outbound traffic to the Kali machine first. The attacker can now see everything in Wireshark that Windows user is doing.
 
 ![kali](./screenshots/kali8.png)
 
