@@ -50,11 +50,13 @@
 
 * Adding the `windows` integration to the policy: management > fleet > agent policies > windows-policy > add integration > windows
 
+![kali](./screenshots/kali3.png)
+
 ### 1.4.Elastic Agent auto Startup problem in Windows (Troubleshooting)
 
 * **win + r** > Run `services.msc` > Find `Elastic Agent`
 
-* `Elastic Agent` > Right click `Properties` > Startup type > `Automatic (delayed)`
+* **Elastic Agent** > Right click > Properties > Startup type > `Automatic (delayed)`
 
 *  **Recovery Tab** > Set "First failure" to `Restart the Service` & Set "Second failure" to `Restart the Service`.
 
@@ -62,8 +64,39 @@
 
 * **Powershell** `Restart-Service "Elastic Agent" -Force`
 
-![kali](./screenshots/kali3.png)
+![win](./screenshots/win1.png)
+
+### 1.5.Elastic Agent maual Startup in Windows (Task Scheduler)
+
+* **Task Scheduler Admin**
+
+* **Action** > Create Task
+
+* Select `Run whether user is logged on or not` & Check `Run with highest privileges`
+
+*  **Trigger** > New > Begin the task > `At Startup` & Check `Delay task for 10 minutes`
+
+*  **Action** > New > Program/Script > `powershell.exe` > Add Arugements > `-ExecutionPolicy Bypass -WindowStyle Hidden -Command "Restart-Service 'Elastic Agent' -Force"`
+
+*  **Condition** Uncheck `Start the task only if the computer is on AC power`
+
+*  **Settings** > Check `Run the task as soon as possible after schduled start is missed` & Check `if task fails, restart every: 1 min` & Attempt to restart up to `3 times`
+
+![win](./screenshots/win2.png)
 
 ---
 
+## 2.SIEM Detection Rules
+
+* `curl -X GET "localhost:9200/_cluster/health?pretty"`
+
+* `suod systemctl restart elasticsearch.service`
+
+* _**JvmGcMonitorService** needs more than 8GB of RAM_
+
+### 2.1.Adding rules for failed logon (4625)
+
+* **Hamburger Menu** > Security >  Rules > Detection Rules (SIEM) > Create New Rules
+
+* **Define Rule** Select `Threshold` >
 
