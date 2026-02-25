@@ -122,9 +122,43 @@
 
 ---
 
-## 3.
+## 3.SIEM Alert for Detection Rules
 
-### 3.1.
+### 3.1.Multiple Faild Logons in Windows
+
+**Brute force/Dictionary attack using Medusa**
+
+* Executed the command `sudo medusa -h 192.168.251.11 -u Bob -P /usr/share/wordlists/rockyou.txt -M smbnt` targeting SMB to trigger the alert in ELK.
+
+![kali](./screenshots/kali5.png)
+
+**SIEM Alert**
+
+* SIEM Dashboard detected the alert for the multiple failed login attempts (4625) in Windows VM.
+
+* **Hamburger Menu** > Security >  Alerts > SIEM Dashboard
+
+![kali](./screenshots/kali6.png)
+
+**Creating New Case for the Alert**
+
+* Security > Cases > Add to new cases
+
+![kali](./screenshots/kali7.png)
+
+**Discover**
+
+* `agent.name:` 
+
+* `event.code:`
+
+* `winlog.event_data.LogonType:`
+
+* `source.ip:`
+
+* `@timestamp`
+
+ ![kali](./screenshots/kali8.png)
 
 
 
