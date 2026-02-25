@@ -82,6 +82,8 @@
 
 *  **Settings** > Check `Run the task as soon as possible after schduled start is missed` & Check `if task fails, restart every: 1 min` & Attempt to restart up to `3 times`
 
+*  _Switch to `At User Logon` if `At Startup` failed in vm_
+
 ![win](./screenshots/win2.png)
 
 ---
@@ -92,11 +94,37 @@
 
 * `suod systemctl restart elasticsearch.service`
 
+* `curl -k -u elastic https://localhost:9200`
+
 * _**JvmGcMonitorService** needs more than 8GB of RAM_
 
-### 2.1.Adding rules for failed logon (4625)
+### 2.1.Adding Rules for Brute/Dictionary: Failed Logon (4625)
 
 * **Hamburger Menu** > Security >  Rules > Detection Rules (SIEM) > Create New Rules
 
-* **Define Rule** Select `Threshold` >
+* **Define Rule** Select `Threshold`
+
+* **Source** `Index Patterns` & Index patterns `logs-*`
+
+* **Custom Query** `winlog.event_id : 4625`
+
+* **Group By** `winlog.event_data.AccountName` & Threshold `10`
+
+* **Name** `Brute Force/Dictionary`
+
+* **Severity** `Critical` & **Risk score** `99`
+
+* **Schduled Run** Runs every `1m` & Additional look-back time `1m`
+
+* **Create & Enable Rule**
+
+![kali](./screenshots/kali4.png)
+
+---
+
+## 3.
+
+### 3.1.
+
+
 
