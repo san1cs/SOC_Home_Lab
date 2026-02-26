@@ -1,3 +1,0 @@
-# Wazuh Deployment & Alert Validations
-
----
