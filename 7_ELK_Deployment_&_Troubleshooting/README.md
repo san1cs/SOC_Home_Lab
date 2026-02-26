@@ -228,5 +228,5 @@
 
 ## 5.Final Lab Summary
 
-**Despite the hardware limitations, the primary goal of the lab was achieved. The attack was successfully executed, the data pipeline was secured via HTTPS/Fleet, and the logs were centralized. This project stands as a testament to the fact that a SOC Analyst must be part Security Researcher, part Systems Engineer, and part Hardware Specialist.**
+**Despite the hardware limits, the main goal of the lab was reached. The attack was successfully carried out, the data flow was secured using HTTPS and Fleet, and the logs were all collected in one place. This project proves that a SOC Analyst must act as a Security Researcher, a Systems Engineer, and a Hardware Specialist all at once.**
 
