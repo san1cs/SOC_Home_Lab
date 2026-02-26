@@ -27,7 +27,7 @@ This project is an end-to-end Security Operations Center (SOC) Home Lab designed
 * **Endpoint Security:** Windows Defender (NGAV), Wazuh EDR
 * **Host-Based Analysis:** Windows Event Viewer, Process Explorer
 * **Social Engineering:** Zphisher
-* **Offensive Security:** Kali Linux, Metasploit Framework, arpspoof
+* **Offensive Security:** Metasploit Framework, arpspoof, Hydra, Medusa
 * **Vulnerability Management:** OpenVAS (GVM)
 
 ## Skills Demonstrated
