@@ -90,11 +90,13 @@ During a routine sweep of the endpoint using Process Explorer, a suspicious acti
 
 ![win](./screenshots/win9.png)
 
+![win](./screenshots/win10.png)
+
 * **Phase 4: Incident Response Team (Response & Remediation)**
 
 To prevent the attacker from moving laterally through the network, the IR team immediately suspended the malicious process and isolated the workstation. The malicious process was killed. The IR team identified and deleted a hidden Scheduled Task that was set to re-execute the malware every hour. The source Trojan (MS_Office_Free.exe) was quarantined and deleted. the user's (Bob's) credentials were reset to ensure the attacker could not return using stolen passwords.
 
-![win](./screenshots/win10.png)
+![win](./screenshots/win11.png)
 
 ### 3.2.Key Lesson
 
