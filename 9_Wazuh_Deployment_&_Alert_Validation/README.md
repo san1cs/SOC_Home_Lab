@@ -50,5 +50,39 @@
 
 ---
 
+## 2.Login Alerts
+
+### 2.1.False Positive: Multiple Login Failed SSH
+
+**Setting up the SSH in Kali Linux**
+
+* `sudo apt install openssh-server -y`
+
+* `sudo systemctl enable --now ssh`
+
+**Login via SSH through Windows**
+
+* **CMD:** `ssh kali@192.168.251.3`
+
+![win](./screenshots/win1.png)
+
+**Alert Triggered on SIEM Dashboard**
+
+![wazuh](./screenshots/wazuh3.png)
+
+**Looking up the events to veriy the alert**
+
+![wazuh](./screenshots/wazuh4.png)
+
+* The sequence of five authentication failures followed immediately by a successful login validates this activity as a false positive, characterizing routine user error rather than a malicious brute-force attempt.
+
+* [**False Positive Report**](./report/events-2026-02-27T10_05_22.351Z.csv) _(.cvs file)_
+
+### 2.3.True positive: RDP Brute Force
+
+### 2.4.Suspicious User Login: Insider Threat
+
+---
+
 
 
