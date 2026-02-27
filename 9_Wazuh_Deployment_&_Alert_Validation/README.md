@@ -54,23 +54,23 @@
 
 ### 2.1.False Positive: Multiple Login Failed SSH
 
-**Setting up the SSH in Kali Linux**
+**1.Setting up the SSH in Kali Linux**
 
 * `sudo apt install openssh-server -y`
 
 * `sudo systemctl enable --now ssh`
 
-**Login via SSH through Windows**
+**2.Login via SSH through Windows**
 
 * **CMD:** `ssh kali@192.168.251.3`
 
 ![win](./screenshots/win1.png)
 
-**Alert Triggered on SIEM Dashboard**
+**3.Alert Triggered on SIEM Dashboard**
 
 ![wazuh](./screenshots/wazuh3.png)
 
-**Looking up the events to veriy the alert**
+**4.Looking up the events to veriy the alert**
 
 ![wazuh](./screenshots/wazuh4.png)
 
@@ -78,7 +78,33 @@
 
 * [**False Positive Report**](./report/events-2026-02-27T10_05_22.351Z.csv) _(.cvs file)_
 
-### 2.3.True positive: RDP Brute Force
+### 2.3.True positive: RDP Dictionary attack
+
+**1.Setting up the RDP in Windows**
+
+* **Turn on the RDP connection in windows:** Settings > System > Remote Desktop
+
+* _For the lab demonstration "Require computers to use Network Level Authentication (NLA) to connect" has been turned off_
+
+![win](./screenshots/win2.png)
+
+**2.Making sure the windows to collect the log**
+
+* **Powershell:** `auditpol /set /subcategory:"Logon" /success:enable /failure:enable`
+
+* _By default, Windows is often "quiet" it might not log every failed password attempt. This command forces it to speak up so that Wazuh Agent can "hear" what is happening and report it to dashboard._
+
+**3.Running a Dictionary attack using hydra**
+
+* `sudo hydra -l Bob -P /usr/share/wordlists/rockyou.txt -t 4 192.168.251.11 rdp -vV`
+
+**4.Checking the alert on SIEM Dashboard**
+
+![wazuh](./screenshots/wazuh5.png)
+
+![wazuh](./screenshots/wazuh6.png)
+
+* [**True Positive Report**](./report/) _(.cvs)_
 
 ### 2.4.Suspicious User Login: Insider Threat
 
