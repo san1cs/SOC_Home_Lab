@@ -1,0 +1,7 @@
+timestamp,agent.name,rule.description,rule.level,rule.id
+"Feb 27, 2026 @ 15:28:14.638",kali,sshd: authentication success.,3,5715
+"Feb 27, 2026 @ 15:28:08.564",kali,sshd: authentication failed.,5,5760
+"Feb 27, 2026 @ 15:28:02.498",kali,sshd: authentication failed.,5,5760
+"Feb 27, 2026 @ 15:27:44.382",kali,sshd: authentication failed.,5,5760
+"Feb 27, 2026 @ 15:27:38.375",kali,sshd: authentication failed.,5,5760
+"Feb 27, 2026 @ 15:27:36.267",kali,sshd: authentication failed.,5,5760
