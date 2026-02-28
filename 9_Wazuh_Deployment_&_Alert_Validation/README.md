@@ -76,7 +76,7 @@
 
 * The sequence of five authentication failures followed immediately by a successful login validates this activity as a false positive, characterizing routine user error rather than a malicious brute-force attempt.
 
-* [**False Positive Report**](./report/events-2026-02-27T10_05_22.351Z.csv) _(.cvs file)_
+* [**False Positive Report**](./report/events-2026-02-27T10_05_22.351Z.csv)
 
 ### 2.3.True positive: RDP Dictionary attack
 
@@ -104,7 +104,7 @@
 
 * The presence of a final logon failure (Rule 60122) just 4 milliseconds after the account lockout event (Rule 60115) confirms an automated brute-force attack, as the attacker's parallel threads continued to hit the service even after the security policy had successfully locked the account."
 
-* [**True Positive Report**](./report/events-2026-02-28T07_42_37.205Z.csv) _(.cvs)_
+* [**True Positive Report**](./report/events-2026-02-28T07_42_37.205Z.csv)
 
 ### 2.4.Suspicious User Login: Insider Threat
 
@@ -114,12 +114,16 @@
 
 ![wazuh](./screenshots/wazuh7.png)
 
-* A successful Privilege Escalation and Obfuscation attempt was identified; by using administrative credentials to execute wevtutil, the insider (Alice) attempted to delete system audit trails—an action immediately flagged by Wazuh as a high-severity tactical alert."
+* A successful Privilege Escalation and Obfuscation attempt was identified; by using administrative credentials to execute wevtutil, the insider (Alice) attempted to delete system audit trails—an action immediately flagged by Wazuh as a high-severity tactical alert.
 
-* [**Insider Threat Report**](./report/) _(.cvs)_
+* [**Insider Threat Report**](./report/events-2026-02-28T12_51_08.497Z.csv)
 
 ---
 
-## 3.
+## 3.Real-time Detection of Unauthorized File Modifications (FIM)
+
+### 3.1.Configuring the "Watchdog"
+
+### 3.2.The "Detection" Simulation
 
 
