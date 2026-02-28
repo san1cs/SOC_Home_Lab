@@ -19,7 +19,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ![kali](./screenshots/kali1.png)
 
-[**ICMP**](./pcap_files/icmp.pcapng)
+* [**ICMP**](./pcap_files/icmp.pcapng)
 
 ---
 
@@ -49,7 +49,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ![kali](./screenshots/kali2.png)
 
-[**TCP-3-way**](./pcap_files/tcp.pcapng)
+* [**TCP-3-way**](./pcap_files/tcp.pcapng)
 
 ---
 
@@ -79,7 +79,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ![kali](./screenshots/kali3.png)
 
-[**TCP-3-way-fail**](./pcap_files/tcpfail.pcapng)
+* [**TCP-3-way-fail**](./pcap_files/tcpfail.pcapng)
 
 ---
 
@@ -109,7 +109,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ![kali](./screenshots/kali4.png)
 
-[**Telnet**](./pcap_files/telnet.pcapng)
+* [**Telnet**](./pcap_files/telnet.pcapng)
 
 ---
 
@@ -141,7 +141,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ![kali](./screenshots/kali5.png)
 
-[**HTTP**](./pcap_files/http.pcapng)
+* [**HTTP**](./pcap_files/http.pcapng)
 
 ---
 
@@ -171,7 +171,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ![kali](./screenshots/kali6.png)
 
-[**Stealth**](./pcap_files/stealth.pcapng)
+* [**Stealth**](./pcap_files/stealth.pcapng)
 
 ---
 
@@ -197,7 +197,7 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ![kali](./screenshots/kali7.png)
 
-[**DOS**](./pcap_files/dos.pcapng)
+* [**DOS**](./pcap_files/dos.pcapng)
 
 ---
 
@@ -224,6 +224,6 @@ This capture verifies successful bidirectional communication between the Kali Li
 
 ![kali](./screenshots/kali8.png)
 
-[**ARP**](./pcap_files/arp.pcapng)
+* [**ARP**](./pcap_files/arp.pcapng)
 
 ---
