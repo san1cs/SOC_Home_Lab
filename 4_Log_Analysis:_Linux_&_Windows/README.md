@@ -15,7 +15,7 @@
 
 ![Kali](./screenshots/kali_hydra_meta2.png)
 
-* [Linux Log](./logs/ftp_attack.txt)
+* [**Linux Log**](./logs/ftp_attack.txt)
 
 ### 1.2.Deep Log Analysis: Identification and Forensics
 
@@ -61,7 +61,7 @@
 
 ![windows](./screenshots/windows_evt1.png)
 
-[Windows log](./logs/wine.evtx) _Download the .evtx to view it locally on windows_
+* [**Windows log**](./logs/wine.evtx)
 
 ### 2.2.Visual Log Analysis: Identification and Forensics
 
@@ -71,7 +71,7 @@
 
 ![windows](./screenshots/chart.png)
 
-[Windows log](./logs/winc.cvs) _.cvs file can be opened and upload it to excle or sheets_
+* [**Windows log**](./logs/winc.csv)
 
 **Analysis Results:**
 
