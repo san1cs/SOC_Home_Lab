@@ -71,7 +71,7 @@
 
 ![windows](./screenshots/chart.png)
 
-[Windows log](./logs/wins.cvs) _.cvs file can be opened and upload it to excle or sheets_
+[Windows log](./logs/winc.cvs) _.cvs file can be opened and upload it to excle or sheets_
 
 **Analysis Results:**
 
