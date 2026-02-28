@@ -86,8 +86,6 @@
 
 * _For the lab demonstration "Require computers to use Network Level Authentication (NLA) to connect" has been turned off_
 
-![win](./screenshots/win2.png)
-
 **2.Making sure the windows to collect the log**
 
 * **Powershell:** `auditpol /set /subcategory:"Logon" /success:enable /failure:enable`
@@ -96,7 +94,7 @@
 
 **3.Running a Dictionary attack using hydra**
 
-* `sudo hydra -l Bob -P /usr/share/wordlists/rockyou.txt -t 4 192.168.251.11 rdp -vV`
+* `sudo hydra -l Bob -P /usr/share/wordlists/rockyou.txt -t 1 192.168.251.11 rdp -vV`
 
 **4.Checking the alert on SIEM Dashboard**
 
@@ -104,11 +102,24 @@
 
 ![wazuh](./screenshots/wazuh6.png)
 
-* [**True Positive Report**](./report/) _(.cvs)_
+* The presence of a final logon failure (Rule 60122) just 4 milliseconds after the account lockout event (Rule 60115) confirms an automated brute-force attack, as the attacker's parallel threads continued to hit the service even after the security policy had successfully locked the account."
+
+* [**True Positive Report**](./report/events-2026-02-28T07_42_37.205Z) _(.cvs)_
 
 ### 2.4.Suspicious User Login: Insider Threat
 
+* **Standard user:** Alice logged in outside of the office hour
+
+* Executed powershell command with admin rights `wevtutil cl System`
+
+![wazuh](./screenshots/wazuh7.png)
+
+* A successful Privilege Escalation and Obfuscation attempt was identified; by using administrative credentials to execute wevtutil, the insider (Alice) attempted to delete system audit trails—an action immediately flagged by Wazuh as a high-severity tactical alert."
+
+* [**Insider Threat Report**](./report/) _(.cvs)_
+
 ---
 
+## 3.
 
 
