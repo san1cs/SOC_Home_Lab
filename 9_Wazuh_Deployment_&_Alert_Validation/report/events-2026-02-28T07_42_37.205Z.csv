@@ -1,0 +1,22 @@
+timestamp,agent.name,rule.description,rule.level,rule.id
+"Feb 28, 2026 @ 12:43:29.513",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:29.509",DESKTOP-PBJ85VH,User account locked out (multiple login errors),9,60115
+"Feb 28, 2026 @ 12:43:28.446",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:27.383",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:26.320",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:25.234",DESKTOP-PBJ85VH,Multiple Windows Logon Failures,10,60204
+"Feb 28, 2026 @ 12:43:24.176",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:23.098",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:22.734",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:22.409",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:22.080",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:21.801",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:20.666",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:19.046",DESKTOP-PBJ85VH,Multiple Windows Logon Failures,10,60204
+"Feb 28, 2026 @ 12:43:17.774",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:16.546",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:15.230",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:13.893",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:12.575",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:11.263",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
+"Feb 28, 2026 @ 12:43:09.652",DESKTOP-PBJ85VH,Logon Failure - Unknown user or bad password,5,60122
