@@ -104,7 +104,7 @@
 
 * The presence of a final logon failure (Rule 60122) just 4 milliseconds after the account lockout event (Rule 60115) confirms an automated brute-force attack, as the attacker's parallel threads continued to hit the service even after the security policy had successfully locked the account."
 
-* [**True Positive Report**](./report/events-2026-02-28T07_42_37.205Z) _(.cvs)_
+* [**True Positive Report**](./report/events-2026-02-28T07_42_37.205Z.cvs) _(.cvs)_
 
 ### 2.4.Suspicious User Login: Insider Threat
 
