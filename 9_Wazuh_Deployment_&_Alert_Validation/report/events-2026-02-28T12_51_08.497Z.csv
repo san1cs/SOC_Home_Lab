@@ -1,0 +1,5 @@
+timestamp,agent.name,rule.description,rule.level,rule.id
+"Feb 28, 2026 @ 18:01:58.993",DESKTOP-PBJ85VH,A Windows log file was cleared,5,63104
+"Feb 28, 2026 @ 18:01:32.120",DESKTOP-PBJ85VH,Windows Workstation Logon Success,3,60118
+"Feb 28, 2026 @ 18:01:32.095",DESKTOP-PBJ85VH,Windows Workstation Logon Success,3,60118
+"Feb 28, 2026 @ 17:56:33.018",DESKTOP-PBJ85VH,Windows Workstation Logon Success,3,60118
