@@ -1,7 +1,6 @@
 # Wireshark Packet Analysis
 
 ---
-_.pcapng files can be opend with wireshark_
 
 ## 1.ICMP Traffic Capture
 
