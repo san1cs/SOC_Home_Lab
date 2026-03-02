@@ -148,10 +148,16 @@
 
 ![win](./screenshots/win4.png)
 
-* 
+* File Modifications (FIM) events in Wazuh
 
-![win](./screenshots/win5.png)
+![win](./screenshots/wazuh8.png)
 
-![win](./screenshots/win6.png)
+![win](./screenshots/wazuh9.png)
+
+* To mitigate the risk of unauthorized data modification, Wazuh's File Integrity Monitoring (FIM) was configured with `realtime="yes"` and `report_changes="yes"`. This setup allowed instantly detect when a file was created or deleted by a user. Most importantly, by capturing the 'diff' of file modifications, the system provided solid proof of the specific data altered inside the files, transforming a simple 'modification' alert into a deep-dive forensic investigation tool."
+
+---
+
+## 4.
 
 
