@@ -142,19 +142,17 @@
 
 * C:\Users\Bob\Documents\Reports\ [**Payment.txt**](./folder/Payment.txt)
 
-![win](./screenshots/win3.png)
-
 * Changing the values & Deleting the file
 
-![win](./screenshots/win4.png)
-
-* File Modifications (FIM) events in Wazuh
+* File Modifications (FIM) events detection in Wazuh
 
 ![win](./screenshots/wazuh8.png)
 
 ![win](./screenshots/wazuh9.png)
 
 * To mitigate the risk of unauthorized data modification, Wazuh's File Integrity Monitoring (FIM) was configured with `realtime="yes"` and `report_changes="yes"`. This setup allowed instantly detect when a file was created or deleted by a user. Most importantly, by capturing the 'diff' of file modifications, the system provided solid proof of the specific data altered inside the files, transforming a simple 'modification' alert into a deep-dive forensic investigation tool."
+
+* [**FIM Report**](./report/events-2026-03-02T02_20_40.511Z.csv)
 
 ---
 
