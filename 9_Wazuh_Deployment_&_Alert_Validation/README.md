@@ -76,7 +76,7 @@
 
 * The sequence of five authentication failures followed immediately by a successful login validates this activity as a false positive, characterizing routine user error rather than a malicious brute-force attempt.
 
-* [**False Positive Report**](./report/events-2026-02-27T10_05_22.351Z.csv)
+* [**False Positive**](./report/events-2026-02-27T10_05_22.351Z.csv)
 
 ### 2.3.True positive: RDP Dictionary attack
 
@@ -104,7 +104,7 @@
 
 * The presence of a final logon failure (Rule 60122) just 4 milliseconds after the account lockout event (Rule 60115) confirms an automated brute-force attack, as the attacker's parallel threads continued to hit the service even after the security policy had successfully locked the account."
 
-* [**True Positive Report**](./report/events-2026-02-28T07_42_37.205Z.csv)
+* [**True Positive**](./report/events-2026-02-28T07_42_37.205Z.csv)
 
 ### 2.4.Suspicious User Login: Insider Threat
 
@@ -116,7 +116,7 @@
 
 * A successful Privilege Escalation and Obfuscation attempt was identified; by using administrative credentials to execute wevtutil, the insider (Alice) attempted to delete system audit trails—an action immediately flagged by Wazuh as a high-severity tactical alert.
 
-* [**Insider Threat Report**](./report/events-2026-02-28T12_51_08.497Z.csv)
+* [**Insider Threat**](./report/events-2026-02-28T12_51_08.497Z.csv)
 
 ---
 
@@ -152,10 +152,24 @@
 
 * To mitigate the risk of unauthorized data modification, Wazuh's File Integrity Monitoring (FIM) was configured with `realtime="yes"` and `report_changes="yes"`. This setup allowed instantly detect when a file was created or deleted by a user. Most importantly, by capturing the 'diff' of file modifications, the system provided solid proof of the specific data altered inside the files, transforming a simple 'modification' alert into a deep-dive forensic investigation tool."
 
-* [**FIM Report**](./report/events-2026-03-02T02_20_40.511Z.csv)
+* [**FIM**](./report/events-2026-03-02T02_20_40.511Z.csv)
 
 ---
 
-## 4.
+## 4.Real-Time Malware Detection and Forensic Analysis
+
+### 4.1.Full Attack Chain: Command and Control (C2)
+
+* Creating a malware uisng msfvenom ``.
+
+* Hosted it on `/var/www/html/WinUpdatex64` in kali.
+
+* * _Windows defender real time protection is turned off for this lab demonstration._
+
+* Downloading the malware from `http://192.168.251.3/WinUpdatex64` and running it on windows to make the remote connecion for command and control.
+
+* Meterpreter session opened in multi/handler.
+
+### 4.2.Post-Exploitation Analysis: Detecting C2 Persistence and Lateral Movement
 
 
