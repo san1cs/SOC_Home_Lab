@@ -1,0 +1,3 @@
+timestamp,agent.name,syscheck.path,syscheck.event,rule.description,rule.level,rule.id
+"Mar 2, 2026 @ 07:42:04.376",DESKTOP-PBJ85VH,c:\users\bob\documents\reports\payment.txt,deleted,File deleted.,7,553
+"Mar 2, 2026 @ 07:39:23.210",DESKTOP-PBJ85VH,c:\users\bob\documents\reports\payment.txt,modified,Integrity checksum changed.,7,550
