@@ -124,6 +124,34 @@
 
 ### 3.1.Configuring the "Watchdog"
 
+* **CMD Admin:** `notepad "C:\Program Files (x86)\ossec-agent\ossec.conf"`
+
+* In`<syscheck>` section
+
+* **Adding Specific File:** `<directories realtime="yes" report_changes="yes" check_all="yes" restrict="Payment.txt">C:\Users\Bob\Documents\Reports</directories>`
+
+* **win + r** > Run > services.msc > Wazuh > Restart
+
+![win](./screenshots/win2.png)
+
+* _**Linux:** `sudo nano /var/ossec/etc/ossec.conf`_
+
+* _**Linux:** `sudo systemctl restart wazuh-agent`_
+ 
 ### 3.2.The "Detection" Simulation
+
+* C:\Users\Bob\Documents\Reports\ [**Payment.txt**](./folder/Payment.txt)
+
+![win](./screenshots/win3.png)
+
+* Changing the values & Deleting the file
+
+![win](./screenshots/win4.png)
+
+* 
+
+![win](./screenshots/win5.png)
+
+![win](./screenshots/win6.png)
 
 
