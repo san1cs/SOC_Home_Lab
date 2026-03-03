@@ -1,0 +1,18 @@
+agent.name,package.name,package.version,vulnerability.description,vulnerability.severity,vulnerability.id
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Heap-based buffer overflow in Microsoft Graphics Component allows an unauthorized attacker to execute code over a network.,Critical,CVE-2025-60724
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Use after free in Microsoft Graphics Component allows an authorized attacker to elevate privileges over a network.,Critical,CVE-2025-49708
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Windows Reliable Multicast Transport Driver (RMCAST) Remote Code Execution Vulnerability,Critical,CVE-2025-21307
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Windows Reliable Multicast Transport Driver (RMCAST) Remote Code Execution Vulnerability,Critical,CVE-2024-38140
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Windows Line Printer Daemon (LPD) Service Remote Code Execution Vulnerability,Critical,CVE-2024-38199
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Windows OLE Remote Code Execution Vulnerability,Critical,CVE-2025-21298
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Heap-based buffer overflow in Windows GDI+ allows an unauthorized attacker to execute code over a network.,Critical,CVE-2025-53766
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Heap-based buffer overflow in Windows SPNEGO Extended Negotiation allows an unauthorized attacker to execute code over a network.,Critical,CVE-2025-47981
+DESKTOP-PBJ85VH,Microsoft Windows 10 Pro 10.0.19045.3803,10.0.19045.3803,Windows TCP/IP Remote Code Execution Vulnerability,Critical,CVE-2024-38063
+DESKTOP-PBJ85VH,Microsoft Edge,92.0.902.67,Integer overflow in Skia in Google Chrome prior to 119.0.6045.199 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a malicious file. (Chromium security severity: High),Critical,CVE-2023-6345
+DESKTOP-PBJ85VH,Microsoft Edge,92.0.902.67,Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability,Critical,CVE-2024-38219
+DESKTOP-PBJ85VH,Microsoft Edge,92.0.902.67,Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability,Critical,CVE-2024-21326
+DESKTOP-PBJ85VH,Microsoft Edge,92.0.902.67,Heap buffer overflow in GPU in Google Chrome prior to 107.0.5304.121 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High),Critical,CVE-2022-4135
+DESKTOP-PBJ85VH,Microsoft Edge,92.0.902.67,Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability,Critical,CVE-2024-43566
+DESKTOP-PBJ85VH,Microsoft Edge,92.0.902.67,Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability,Critical,CVE-2023-35618
+DESKTOP-PBJ85VH,Microsoft Edge,92.0.902.67,Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability,Critical,CVE-2022-33649
+DESKTOP-PBJ85VH,Microsoft Edge,92.0.902.67,Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability,Critical,CVE-2023-36735
