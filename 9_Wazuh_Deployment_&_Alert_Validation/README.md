@@ -146,9 +146,9 @@
 
 * File Modifications (FIM) events detection in Wazuh
 
-![win](./screenshots/wazuh8.png)
+![wazuh](./screenshots/wazuh8.png)
 
-![win](./screenshots/wazuh9.png)
+![wazuh](./screenshots/wazuh9.png)
 
 * To mitigate the risk of unauthorized data modification, Wazuh's File Integrity Monitoring (FIM) was configured with `realtime="yes"` and `report_changes="yes"`. This setup allowed instantly detect when a file was created or deleted by a user. Most importantly, by capturing the 'diff' of file modifications, the system provided solid proof of the specific data altered inside the files, transforming a simple 'modification' alert into a deep-dive forensic investigation tool."
 
@@ -162,11 +162,13 @@
 
 * The vulnerability scan performed by the Wazuh Cyber Threat Intelligence (CTI) module identified a critical risk level on the target machine. The system is currently exposed to a vast attack surface due to outdated operating system components and browser software.
 
-![win](./screenshots/wazuh10.png)
+![wazuh](./screenshots/wazuh10.png)
 
 * The vulnerability assessment of DESKTOP-PBJ85VH revealed a high-risk security posture with 17 Critical vulnerabilities. The primary attack vector identified is an outdated Windows 10 build (19045.3803) and an obsolete version of Microsoft Edge.
 
-![win](./screenshots/wazuh11.png)
+![wazuh](./screenshots/wazuh11.png)
+
+* [**Critical**](./report/events-2026-03-03T02_45_31.573Z.csv)
 
 * **Remediation Plan:** A comprehensive Windows Update would resolve over 90% of these findings by patching the kernel and updating system-critical browser components. This demonstrates that 'Unpatched Software' was the primary reason the simulated malware was able to operate with such high privileges.
 
@@ -176,34 +178,7 @@
 
 * **Application Lifecycle:** Manually update or reinstall Microsoft Edge to version 130+
 
- ![win](./screenshots/wazuh12.png)
-
-* [**Before report**](./report/events-2026-03-03T02_45_31.573Z.csv)
-
-* [**After report**](./report/)
- 
----
-
-## 5.Security Configuration Assessment
-
-### 5.1.SCA Report
-
-* The Security Configuration Assessment (SCA) of the target workstation returned a failing score of 27% against the CIS Microsoft Windows 10 Enterprise Benchmark. With 301 failed checks, the system is highly susceptible to credential theft and lateral movement. Key failures include non-compliance with password complexity and account lockout policies, directly violating ISO 27001 and GDPR security requirements.
-
- ![win](./screenshots/wazuh13.png)
-
-### 5.2.SCA Score (Hardening)
-
-* Following the initial assessment which showed a baseline score of 27%, a targeted hardening phase was initiated. By manually addressing high-impact configuration failures, the system reached a passing score of [Insert New Score]%. This represents a total improvement of [New Score minus 27]% in the overall security posture of the Windows 10 endpoint.
-
- ![win](./screenshots/wazuh14.png)
-
-* [**Before report**](./report/checks.csv)
-
-* [**After report**](./report/)
-
-* _Used the built-in instructions in Wazuh to find exactly what was wrong with the system's settings. By following the step-by-step guides, navigated into the Windows Local Security Policy and fixed the security gaps. This ensured the computer was locked down according to official industry standards (CIS), rather than just guessing which settings to change._
-
-[PS](./folder/powershell.txt)
+ ![wazuh](./screenshots/wazuh12.png)
 
 ---
+
