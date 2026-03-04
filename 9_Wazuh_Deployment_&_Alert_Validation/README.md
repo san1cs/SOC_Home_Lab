@@ -182,3 +182,15 @@
 
 ---
 
+## 5.Key Lessons: Why Wazuh for SOC Operations
+
+* **Fast Deployment:** Unlike complex ELK stacks, Wazuh is easy to deploy using an OVA, allowing for a quick and stable local setup.
+
+* **Built-in Intelligence:** The pre-configured rules saved hours of manual work, providing instant detection without needing to write code from scratch.
+
+* **Real-Time Monitoring:** Used File Integrity Monitoring (FIM) to catch unauthorized system changes the second they happened.
+
+* **Advanced Filtering:** The dashboard allowed to use deep filters to quickly separate True Positives from False Positives.
+
+* **Proactive Security:** Used the Vulnerability Detection module to identify and fix system weaknesses before they could be exploited.
+
